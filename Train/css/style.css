@@ -1,0 +1,89 @@
+:root {
+    --primary: #2563eb;    /* Un bleu pro */
+    --accent: #7c3aed;     /* Un violet moderne */
+    --bg: #f8fafc;         /* Gris très clair pour le fond */
+    --text: #1e293b;       /* Bleu nuit pour le texte */
+    --white: #ffffff;
+}
+body{
+    background-color: var(--bg);
+    color:var(--text);
+    text-align: left;
+    display: flex;
+    cursor: default;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    background-color: var(--white);
+    color: var(--accent);
+    text-align: center;
+    display: flex;
+    cursor: default;
+    justify-content: center;
+    align-items: center;
+}
+header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;  
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+nav{
+    background-color: var(--white);  
+    padding: 10px 0;  
+    box-shadow:5px 5px 10px rgba(255, 0, 0, 0.5);
+    border-bottom: 1px solid #e2e8f0;
+    
+}
+nav ul {
+    list-style: none;
+    display: flex;             /* On aligne les liens horizontalement */
+    justify-content: center;   /* On les centre */
+    gap: 20px;                 /* On espace les liens */
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+}
+
+/* 4. Sections de contenu */
+main {
+    max-width: 900px;          /* Largeur lisible pour un CV */
+    margin: 2rem auto;         /* Centrage de la page */
+    padding: 0 1rem;
+}
+
+.section{
+    background-color: var(--white);
+    color: var(--text);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 12px;       /* Coins arrondis pro */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+
+}
+.hero{
+    border-top: 5px solid var(--primary);
+    text-align: center;
+
+}
+ul{
+   list-style-type: square;
+    margin-top: 1rem; }
+li{
+    padding: 10px 0;
+     background-color: var(--white);
+    color: var(--text);
+
+}

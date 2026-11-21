@@ -1,0 +1,57 @@
+:root {
+    --primary: #2563eb;    
+    --accent: #7c3aed;     
+    --bg: #f8fafc;         
+    --text: #1e293b;       
+    --white: #ffffff;
+}
+body{
+    background-color: var(--bg);
+    font-family: Arial, sans-serif;
+}
+section {
+    background-color: var(--white);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 12px;       /* Coins arrondis pro */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.Profile-picture {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+p{
+    font-size: 18px;
+    color: var(--text);
+    margin: 10px 0;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    font-size: 16px;
+    color: var(--text);
+    margin: 5px 0;
+}
+/* Dans le CSS pour aligner les éléments proprement */
+.stats-list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+@media (max-width: 768px) {
+    .container-glass {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

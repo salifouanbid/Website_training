@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de citations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="courage">
+
+    <button id="darkBtn" class="link-btn top">Mode sombre</button>
+
+    <main class="card">
+        <h1>Générateur de citations</h1>
+        <p class="subtitle">Choisis un thème, puis une citation célèbre ou une citation générée par le site.</p>
+
+        <div class="chips">
+            <button class="chip active" data-theme="courage">Courage</button>
+            <button class="chip" data-theme="amitie">Amitié</button>
+            <button class="chip" data-theme="sagesse">Sagesse</button>
+            <button class="chip" data-theme="anime">Anime</button>
+            <button class="chip" data-theme="hasard">Hasard</button>
+        </div>
+
+        <div class="quote-box">
+            <span id="badge" class="badge" hidden></span>
+            <blockquote id="quote" aria-live="polite">Clique sur un bouton pour commencer.</blockquote>
+        </div>
+
+        <div class="tools">
+            <button id="copyBtn" class="link-btn">Copier</button>
+            <button id="speakBtn" class="link-btn">Écouter</button>
+            <button id="favBtn" class="link-btn">Garder</button>
+        </div>
+
+        <div class="buttons">
+            <button id="famousBtn" class="btn-main">Citation célèbre</button>
+            <button id="genBtn" class="btn-main btn-alt">Citation générée</button>
+        </div>
+
+        <p class="hint">Raccourcis : C (célèbre), G (générée)</p>
+
+        <section id="favSection" hidden>
+            <h2>Mes citations gardées</h2>
+            <ul id="favList"></ul>
+        </section>
+    </main>
+
+    <div id="toast" role="status"></div>
+    <script src="script.js"></script>
+</body>
+</html>

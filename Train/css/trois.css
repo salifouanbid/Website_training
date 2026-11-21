@@ -1,0 +1,187 @@
+/* Importation d'une police moderne */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #00d2ff;
+    --secondary-color: #3a7bd5;
+    --bg-dark: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --text-light: #f8fafc;
+    --accent: #6366f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top right, #1e293b, #0f172a);
+    color: var(--text-light);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* --- HEADER & NAVIGATION --- */
+header {
+    padding: 2rem 10%;
+    text-align: center;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, var(--primary-color), var(--accent));
+    -webkit-background-clip: text; /* Pour Chrome, Safari et Edge */
+    background-clip: text;         /* La version standard pour les autres */
+    -webkit-text-fill-color: transparent; /* Obligatoire pour laisser voir le dégradé */
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+nav ul li a:hover {
+    background: var(--card-bg);
+    color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- MAIN CONTENT & SECTIONS --- */
+main {
+    padding: 4rem 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
+}
+
+/* --- HERO SECTION (Index) --- */
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero h2 {
+    border: none;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+/* --- LISTS (Parcours & Projets) --- */
+ul, ol {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+li strong {
+    color: var(--accent);
+}
+
+/* --- FORMULAIRE (Contact) --- */
+.container-glass {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.formulaire-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-avis, .champ-texte {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    outline: none;
+}
+
+.champ-texte {
+    height: 120px;
+    resize: none;
+}
+
+.bouton-envoyer {
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent));
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.bouton-envoyer:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 3rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .container-glass {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
